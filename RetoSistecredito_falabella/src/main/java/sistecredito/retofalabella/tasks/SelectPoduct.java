@@ -14,6 +14,8 @@ public class SelectPoduct implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(Click.on(HomePage.ADD_PRODUCT));
+        WaitUntil.the(HomePage.BUTTON_ADVERTISING,WebElementStateMatchers.isCurrentlyVisible());
+        actor.attemptsTo(Click.on(HomePage.BUTTON_ADVERTISING));
         actor.remember(Constants.PRICE_PRODUCT,HomePage.PRICE_PRODUCT.resolveFor(actor).getText().
                 replace(Constants.SYMBOL,Constants.EMPTY).replace(Constants.SYMBOL_POINT,Constants.EMPTY).replace(Constants.PRICE_FINAL_,Constants.EMPTY));
         actor.attemptsTo(Click.on(HomePage.BUTTON_ADD_BAG));

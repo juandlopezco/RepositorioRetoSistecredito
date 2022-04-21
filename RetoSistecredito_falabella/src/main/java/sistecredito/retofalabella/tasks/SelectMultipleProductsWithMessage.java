@@ -17,6 +17,8 @@ public class SelectMultipleProductsWithMessage implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(Click.on(HomePage.ADD_PRODUCT));
+        WaitUntil.the(HomePage.BUTTON_ADVERTISING,WebElementStateMatchers.isCurrentlyVisible());
+        actor.attemptsTo(Click.on(HomePage.BUTTON_ADVERTISING));
         actor.attemptsTo(Click.on(HomePage.BUTTON_ADD_BAG));
 
         while (HomePage.BUTTON_INCREMENT_PRODUCT.resolveFor(actor).isCurrentlyEnabled()){

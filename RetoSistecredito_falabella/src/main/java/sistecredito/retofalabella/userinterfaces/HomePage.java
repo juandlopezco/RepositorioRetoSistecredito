@@ -15,6 +15,8 @@ public class HomePage {
     public static final Target BUTTON_CONTINUE_BUYING = Target.the("button_increment_product").locatedBy("//button[@class='jsx-2166277967 button button-secondary-link']");
     public static final Target BUTTON_WATCH_SHOPPING_BAG = Target.the("button_watch_shopping_bag").locatedBy("//a[@id='linkButton']");
     public static final Target BUTTON_CAR = Target.the("button_car").locatedBy("//li[@id='testId-UserAction-basket']");
+    public static final Target BUTTON_ADVERTISING = Target.the("button_advertising").locatedBy("//div[@class='dy-lb-close']");
+
 
 
 
